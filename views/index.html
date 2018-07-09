@@ -1,0 +1,22 @@
+<style type="text/css">
+	#img_id{
+		margin:5px;
+		width:200px;
+		height:200px
+	}
+</style>
+<a href="{image}"><img id="img_id" src="{image}"></a><br>
+<div>
+<article id = "a7a2" >
+<h2>{title}</h2>
+<p>{body} {if_statment5}
+<p>name: {username}</p>
+<p>date posted: {date}</p>
+</article>
+</div>
+<a style='color:blue' href="view_comments.php?id={post_id}" title='{if_statment1}{if_statment2}{if_statment3}'>show comments</a>
+<a style='color:blue' href='add_comment.php?id={post_id}'>add comment</a>
+{if_statment4}
+<br>
+<hr/>
+<br>

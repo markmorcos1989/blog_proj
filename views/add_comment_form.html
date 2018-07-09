@@ -1,0 +1,13 @@
+<div id="add-comments">
+	<form action="add_comment.php?id={post_id} " method="post">
+		<div>
+			<label>title:</label><br><input type="text" name="title" /><br>
+			<label>comment</label><br><textarea id="textarea" name="comment" cols=50 rows=10 ></textarea><br>
+		</div>
+		<div id="textarea_feedback"></div>
+		<div>
+			<button type="submit" name="submit">submit</button><br />
+		</div>
+	</form>
+	<a href="show_post.php?id={post_id}">back to the post</a><br>
+</div>

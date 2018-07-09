@@ -1,0 +1,20 @@
+<script type="text/javascript" src="ajax_jq.js"></script>
+
+<div id="content">
+	<form action="add_post.php" method="post" enctype="multipart/form-data">
+		<input type="hidden" name="size" value="1000000">
+		<div>
+			<input type="file" name="image">
+		</div>
+		<div>
+			<label for="body">description:</label><br>
+			<textarea id="text" name="body" cols=50 rows=10 onkeyup="text_keyup()" onblur="text_onblur()"></textarea>
+		</div>
+		<span id="textarea_feedback"></span> <span id="text_arror"></span> 
+		<input type="submit" name="submit" value="submit" id="submit" />
+	</form>
+</div>
+<br>
+
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="add_post.js"></script>

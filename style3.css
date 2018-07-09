@@ -1,0 +1,24 @@
+.color
+{
+	background-color: yellow;
+}
+
+.color2
+{
+	background-color: white;
+}
+
+.highlight
+{
+	background-color:yellow;
+}
+
+.bold
+{
+	font-weight:bold;
+}
+
+.error
+{
+	color:red;
+}

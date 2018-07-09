@@ -1,0 +1,16 @@
+<form action='search.php' method='get'>
+<center>
+<h2>search the blog</h2>
+Choose Search type: 
+<select name="type">
+	<option value="username">username
+	<option value="title">title
+	<option value="post">body
+	<option value="date_created">date posted
+</option>
+</select>
+Enter Search keyword:
+<input type='text' name='k' size='25' value="{if_statement}"/>
+<input type='submit' name='search' value='search'/>
+</form>
+</center>

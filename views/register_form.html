@@ -1,0 +1,55 @@
+<script type="text/javascript" src="js/ajax_jq.js"></script>
+<h1>register</h1>
+<p style='color:blue' style='font-size:10px'>all fields are required</p>
+<form name=reg action="register.php" method="POST" onsubmit="return validate()">
+username:<br><input type="text" name="username" maxlength="30" value="{if_statement1}" id="username" onkeyup="username_keyup()" onblur="username_onblur()"><br>
+<span id="username_error"></span>	
+first name:<br><input type="text" name="firstname" maxlength="30" value="{if_statement3}" id="firstname" onkeyup="firstname_keyup()" onblur="firstname_onblur()" ><br>
+<span id="firstname_error"></span>
+last name:<br><input type="text" name="lastname" maxlength="30" value="{if_statement4}" id ="lastname" onkeyup="lastname_keyup()" onblur="lastname_onblur()"><br>
+<span id="lastname_error"></span>
+password:<br><input  type="password" name="password" id="password" onkeyup="pass_keyup()" onblur="pass_onblur()"><br>
+<span id="password_error"></span>
+password_again:<br><input type="password" name="password_again" id="password_again" onkeyup="con_pass_keyup()" onblur="con_pass_onblur()"><br>
+<span id="password_again_error"></span>	
+email add:<br><input type="email" name="email" maxlength="40" value="{if_statement2}" id="email" onkeyup="email_keyup()" onblur="email_onblur()"><br><br>
+<span id="email_error"></span>
+<input type="submit" name="register" value="register" id="register"><br><br>
+</form>
+
+<script>
+$(document).ready(function(){
+	$('#register').click(function(e){
+		//alert("ok");
+		//e.preventDefault();
+		var username = $("#username").val();
+		var firstname = $("#firstname").val();
+		var lastname = $("#lastname").val();
+		var password = $("#password").val();
+		var password_again = $("#password_again").val();
+		var email = $("#email").val();
+		$.ajax({
+			url:"register.php",
+			method:"POST",
+			data:{
+				username:username,
+				firstname:firstname,
+				lastname:lastname,
+				password:password,
+				password_again:password_again,
+				email:email
+			},
+			dataType:"JSON",
+			success:function(data){
+				$('#username_error').html(data.username);
+				$('#firstname_error').html(data.firstname);
+				$('#lastname_error').html(data.lastname);
+				$('#password_error').html(data.password);
+				$('#password_again_error').html(data.password_again);
+				$('#email_error').html(data.email);
+			}
+		})
+	});
+});
+</script>
+

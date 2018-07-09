@@ -1,0 +1,12 @@
+<div id="add-comments">
+	<form action="update_comment.php?id={comment_id} " method="post">
+		<div>
+			<label>title:</label><br><input type="text" name="title" value="{if_statement}" /><br>
+			<label>comment</label><br><textarea name="comment" cols=50 rows=10>{if_statement2}</textarea><br>
+		</div>
+		<div>
+			<input type="submit" name="update_comment" value="update comment"><br />
+		</div>
+		<a href="view_comments.php?id={post_id}">back to the comments</a>
+	</form>
+</div>

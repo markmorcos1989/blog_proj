@@ -1,0 +1,22 @@
+<script type="text/javascript" src="ajax_jq.js"></script>
+
+<h1>register</h1>
+<p style='color:blue' style='font-size:10px'>all fields are required</p>
+<form name=reg action="register.php" method="POST" onsubmit="return validate()">
+username:<br><input type="text" name="username" maxlength="30"  id="username" onkeyup="username_keyup()" onblur="username_onblur()"><br>
+<span style="color:red" id="username_error"></span><br>
+first name:<br><input type="text" name="firstname" maxlength="30"  id="firstname" onkeyup="firstname_keyup()" onblur="firstname_onblur()" ><br>
+<span style="color:red" id="firstname_error"></span><br>
+last name:<br><input type="text" name="lastname" maxlength="30"  id ="lastname" onkeyup="lastname_keyup()" onblur="lastname_onblur()"><br>
+<span style="color:red" id="lastname_error"></span><br>
+password:<br><input  type="password" name="password" id="password" onkeyup="pass_keyup()" onblur="pass_onblur()"><br>
+<span style="color:red" id="password_error"></span><br>
+password_again:<br><input type="password" name="password_again" id="password_again" onkeyup="con_pass_keyup()" onblur="con_pass_onblur()"><br>
+<span style="color:red" id="password_again_error"></span><br>
+email add:<br><input type="email" name="email" maxlength="40"  id="email" onkeyup="email_keyup()" onblur="email_onblur()"><br>
+<span style="color:red" id="email_error"></span><br>
+<input type="submit" name="register" value="register" id="register"><br>
+<span  id="activate"></span><br>
+</form>
+
+<script type="text/javascript" src="reg.js"></script>
